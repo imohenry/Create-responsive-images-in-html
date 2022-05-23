@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Responsive images in plain HTML</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <!--srcset responsive method area start-->
+    <section>
+      <h1>
+        This is to illustrate the srcset method in making responsive images
+      </h1>
+      <div>
+        <img
+          srcset="Gojo-satoru.jpg 1200w, Gojo-satoru.jpg 500w"
+          src="Gojo-satoru.jpg"
+          alt="Gojo-satoru from jujutsu kaisen"
+        />
+      </div>
+    </section>
+    <!--srcset responsive method area end-->
+
+    <!-- picture responsive method area end-->
+    <section>
+      <h1>
+        This is to illustrate the picture method in making responsive images
+      </h1>
+      <picture>
+        <source media="(max-width: 1200px)" srcset="Gojo-satoru-portrait.jpg" />
+        <source media="(min-width: 600px)" srcset="Gojo-satoru.jpg" />
+        <img src="Gojo-satoru.jpg" alt="Gojo-satoru domain expansion image" />
+      </picture>
+    </section>
+  </body>
+</html>
